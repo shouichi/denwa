@@ -1,5 +1,7 @@
 ### Denwa
 
+[![Build Status](https://travis-ci.org/shouichi/denwa.svg?branch=master)](https://travis-ci.org/shouichi/denwa)
+
 日本国内の電話番号を受け取り、市外局番をを考慮して正しい位置にマイナスを付けた
 番号を返します。総務省の電気通信番号指定状況を
 [参照](http://www.soumu.go.jp/main_sosiki/joho_tsusin/top/tel_number/number_shitei.html)
