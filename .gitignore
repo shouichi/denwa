@@ -1,0 +1,9 @@
+*.gem
+*.rbc
+
+.bundle
+.yardoc
+
+doc
+coverage
+vendor/bundle
