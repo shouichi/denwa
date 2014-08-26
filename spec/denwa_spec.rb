@@ -126,4 +126,54 @@ describe Denwa do
       end
     end
   end
+
+  describe '#valid?' do
+    context 'toll free numbers' do
+      it 'converts perfix 0120' do
+        expect(subject.new('0120123456').valid?).to eq(true)
+      end
+    end
+
+    context 'ip numbers' do
+      it 'converts perfix 050' do
+        expect(subject.new('05012345678').valid?).to eq(true)
+      end
+    end
+
+    context 'mobile numbers' do
+      it 'converts perfix 090' do
+        expect(subject.new('09012345678').valid?).to eq(true)
+      end
+    end
+
+    context 'beeper numbers' do
+      it 'converts perfix 020' do
+        expect(subject.new('02012345678').valid?).to eq(true)
+      end
+    end
+
+    context 'unified numbers' do
+      it 'converts perfix 0570' do
+        expect(subject.new('0570123456').valid?).to eq(true)
+      end
+    end
+
+    context 'dial q2 numbers' do
+      it 'converts perfix 0990' do
+        expect(subject.new('0990123456').valid?).to eq(true)
+      end
+    end
+
+    context 'fixed numbers' do
+      it 'converts perfix 03' do
+        expect(subject.new('0312345678').valid?).to eq(true)
+      end
+    end
+
+    context 'unknow numbers' do
+      it 'converts unknow prefix' do
+        expect(subject.new('0000000000').valid?).to eq(false)
+      end
+    end
+  end
 end

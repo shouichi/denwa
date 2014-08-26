@@ -49,4 +49,8 @@ class Denwa
   def kind
     matched.class
   end
+
+  def valid?
+    kind != UnknownNumber
+  end
 end
