@@ -399,7 +399,7 @@ class Denwa
     end
 
     def prefix
-      @prefix ||= REGEXP.match(original)[0]
+      @prefix ||= matching && matching[0]
     end
 
     def infix
@@ -408,6 +408,12 @@ class Denwa
 
     def suffix
       original[-4..-1]
+    end
+
+    private
+
+    def matching
+      @matching ||= REGEXP.match(original)
     end
   end
 end

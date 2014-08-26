@@ -69,6 +69,12 @@ describe Denwa do
         expect(subject.new('0996912345').formatted).to eq('09969-1-2345')
       end
     end
+
+    context 'unknow numbers' do
+      it 'converts unknow prefix' do
+        expect(subject.new('0000000000').formatted).to eq('000-0000-000')
+      end
+    end
   end
 
   describe '#kind' do
@@ -111,6 +117,12 @@ describe Denwa do
     context 'fixed numbers' do
       it 'converts perfix 03' do
         expect(subject.new('0312345678').kind).to eq(Denwa::FixedNumber)
+      end
+    end
+
+    context 'unknow numbers' do
+      it 'converts unknow prefix' do
+        expect(subject.new('0000000000').kind).to eq(Denwa::UnknownNumber)
       end
     end
   end
