@@ -45,4 +45,8 @@ class Denwa
   def matched?
     !!matched
   end
+
+  def kind
+    matched.class
+  end
 end
