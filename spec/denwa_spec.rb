@@ -168,6 +168,10 @@ describe Denwa do
       it 'converts perfix 03' do
         expect(subject.new('0312345678').valid?).to eq(true)
       end
+
+      it 'converts perfix 03' do
+        expect(subject.new('033388').valid?).to eq(false)
+      end
     end
 
     context 'unknow numbers' do

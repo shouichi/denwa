@@ -395,7 +395,7 @@ class Denwa
     REGEXP = /\A#{PREFIXES.join('|')}/.freeze
 
     def matched?
-      !!prefix
+      !!prefix && suffix.length == 4
     end
 
     def prefix
@@ -407,7 +407,7 @@ class Denwa
     end
 
     def suffix
-      original[-4..-1]
+      original[prefix.length + infix.length, 4]
     end
 
     private
