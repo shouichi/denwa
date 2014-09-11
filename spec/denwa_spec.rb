@@ -179,5 +179,19 @@ describe Denwa do
         expect(subject.new('0000000000').valid?).to eq(false)
       end
     end
+
+    context 'alphabet' do
+      it 'returns valse' do
+        expect(subject.new('031234567a').valid?).to eq(false)
+      end
+
+      it 'returns valse' do
+        expect(subject.new('03123a5678').valid?).to eq(false)
+      end
+
+      it 'returns valse' do
+        expect(subject.new('a312345678').valid?).to eq(false)
+      end
+    end
   end
 end

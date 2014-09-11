@@ -52,6 +52,10 @@ class Denwa
   end
 
   def valid?
-    kind != UnknownNumber
+    number? && kind != UnknownNumber
+  end
+
+  def number?
+    !!(original =~ /^[0-9]*$/)
   end
 end
