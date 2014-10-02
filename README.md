@@ -1,6 +1,8 @@
 ### Denwa
 
 [![Build Status](https://travis-ci.org/shouichi/denwa.svg?branch=master)](https://travis-ci.org/shouichi/denwa)
+[![Coverage Status](https://img.shields.io/coveralls/shouichi/denwa.svg)](https://coveralls.io/r/shouichi/denwa)
+[![Code Climate](https://codeclimate.com/github/shouichi/denwa/badges/gpa.svg)](https://codeclimate.com/github/shouichi/denwa)
 
 日本国内の電話番号を受け取り、市外局番をを考慮して正しい位置にマイナスを付けた
 番号を返します。総務省の電気通信番号指定状況を
