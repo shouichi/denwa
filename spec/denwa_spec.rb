@@ -10,7 +10,7 @@ describe Denwa do
       end
 
       it 'converts perfix 0800' do
-        expect(subject.new('0800123456').formatted).to eq('0800-123-456')
+        expect(subject.new('08001234567').formatted).to eq('0800-123-4567')
       end
     end
 

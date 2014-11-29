@@ -3,8 +3,12 @@ class Denwa
   class BeeperNumber < Base
     PREFIX = '020'.freeze
 
-    def matched?
+    def prefix_matched?
       PREFIX == prefix
+    end
+
+    def length_matched?
+      original.length == 11
     end
 
     def prefix

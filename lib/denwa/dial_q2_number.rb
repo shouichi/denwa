@@ -3,8 +3,12 @@ class Denwa
   class DialQ2Number < Base
     PREFIX = '0990'.freeze
 
-    def matched?
+    def prefix_matched?
       PREFIX == prefix
+    end
+
+    def length_matched?
+      original.length == 10
     end
 
     def prefix

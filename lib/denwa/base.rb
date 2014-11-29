@@ -21,5 +21,9 @@ class Denwa
     def sections
       @sections ||= [prefix, infix, suffix]
     end
+
+    def matched?
+      prefix_matched? && length_matched?
+    end
   end
 end

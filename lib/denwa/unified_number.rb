@@ -3,8 +3,12 @@ class Denwa
   class UnifiedNumber < Base
     PREFIX = '0570'.freeze
 
-    def matched?
+    def prefix_matched?
       PREFIX == prefix
+    end
+
+    def length_matched?
+      original.length == 10
     end
 
     def prefix
